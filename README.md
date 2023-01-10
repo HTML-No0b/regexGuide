@@ -13,15 +13,25 @@ The regular expression I will give a tutorial on, will be matching an Email:    
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
-- [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
 
 ## Regex Components
-
+When using RegEx you begin with  ( **/** ) because Regular Expressions are literal. Just like the beginnging of the RegEx email.
+*  `` /^([a-z0-9_\.-]+)`` What this string is showing is that it is taking in every **Lowercase** letter ``a-z `` &  **Numbers** ``0-9``. Including the special 
+characters  ``_ \ . - `` . 
 ### Anchors
+  > The special characters ``^`` and ``$`` are both **Anchors**. 
+      
+  These special characters can loosely be considerd "opening and closing " tags. What makes the two characters special are the following:
 
+  When starting your string the **^** indicates that everything that follows is the start, be it string or different matches. 
+
+  While the **$** character indicates that everything before ends with the characters that were supplied. 
+    
 ### Quantifiers
+What are Quantifiers? Quantifiers are basically limits that are set on the string that it is embedded in. What does that mean, check out the code below.
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 ### Grouping Constructs
 
@@ -29,7 +39,6 @@ The regular expression I will give a tutorial on, will be matching an Email:    
 
 ### Character Classes
 
-### The OR Operator
 
 ### Flags
 
